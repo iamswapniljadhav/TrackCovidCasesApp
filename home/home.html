@@ -1,0 +1,32 @@
+<div>
+  <h1>Hello {{$ctrl.name}}!</h1>  
+  </div>
+
+
+
+  <div class="col-md-4">
+   <h3>Confirmed : {{$ctrl.covidData.confirmed.value}}</h3>
+  </div>
+  <div class="col-md-4">
+    <h3>Recovered : {{$ctrl.covidData.recovered.value}}</h3>
+  </div>
+  <div class="col-md-4">
+    <h3>Deaths : {{$ctrl.covidData.deaths.value}}</h3>
+  </div>
+
+
+  <h2>Search Cases By Counrty</h2>
+  <div>
+    <input type="text" placeholder="Enter a Country" ng-model=country ng-change="searchbyCountry()">
+   <p> Searching for counrty - {{country}}</p>
+  </div>
+
+  <div class="col-md-4">
+    <h3>Confirmed in {{country}} : {{$ctrl.covidDataByCountry.confirmed.value}}</h3>
+   </div>
+   <div class="col-md-4">
+     <h3>Recovered in {{country}} : {{$ctrl.covidDataByCountry.recovered.value}}</h3>
+   </div>
+   <div class="col-md-4">
+     <h3>Deaths in {{country}}: {{$ctrl.covidDataByCountry.deaths.value}}</h3>
+   </div>
